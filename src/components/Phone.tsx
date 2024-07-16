@@ -1,39 +1,39 @@
-import { HTMLAttributes } from "react";
-import { cn } from "@/lib/utils";
+import { HTMLAttributes } from 'react'
+import { cn } from '@/lib/utils'
 
 interface PhoneProps extends HTMLAttributes<HTMLDivElement> {
-  imgSrc: string;
-  dark?: boolean;
+  imgSrc: string
+  dark?: boolean
 }
 
 const Phone = ({ imgSrc, className, dark = false, ...props }: PhoneProps) => {
   return (
     <div
       className={cn(
-        "pointer-events-none relative z-50 overflow-hidden",
-        className,
+        'pointer-events-none relative z-50 overflow-hidden',
+        className
       )}
       {...props}
     >
       <img
-        className="pointer-events-none z-50 select-none"
+        className='pointer-events-none z-50 select-none'
         src={
           dark
-            ? "/phone-template-dark-edges.png"
-            : "/phone-template-white-edges.png"
+            ? '/phone-template-dark-edges.png'
+            : '/phone-template-white-edges.png'
         }
-        alt="phone image"
+        alt='phone image'
       />
 
-      <div className="absolute inset-0 -z-10">
+      <div className='absolute inset-0 -z-10'>
         <img
-          className="object-cover"
+          className='min-h-full min-w-full object-cover'
           src={imgSrc}
-          alt="overlaying phone image"
+          alt='overlaying phone image'
         />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Phone;
+export default Phone
