@@ -1,3 +1,5 @@
+'use client'
+
 import { OrderStatus } from '@prisma/client'
 import { useMutation } from '@tanstack/react-query'
 import { Check, ChevronsUpDown } from 'lucide-react'
