@@ -10,7 +10,7 @@ const Navbar = async () => {
   const isAdmin = user?.email === process.env.ADMIN_EMAIL;
 
   return (
-    <nav className="backgrop-blur-lg sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-gray-200 bg-white/75 transition-all">
+    <nav className="backdrop-blur-lg sticky inset-x-0 top-0 z-[100] h-14 w-full border-b border-gray-200 bg-white/75 transition-all">
       <MaxWidthWrapper>
         <div className="flex h-14 items-center justify-between border-b border-zinc-200">
           <Link href="/" className="z-40 flex font-semibold">
